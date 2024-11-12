@@ -1,0 +1,30 @@
+fun main() {
+    println("Transcript of Records 2022-2023")
+    println("==============================")
+
+    // Store the grades for each subject
+    val grades = mapOf(
+        "Language and Communication" to 1.00,
+        "College Logic and Math" to 2.00,
+        "Philippine Popular Culture" to 1.00,
+        "PE1" to 1.25,
+        "Understanding the Self" to 1.00,
+        "The Contemporary World" to 1.25
+    )
+
+    // Display the grades for each subject
+    println("\nGrades:")
+    for ((subject, grade) in grades) {
+        println("$subject: $grade")
+    }
+
+    // Calculate the GPA
+    val totalGrades = grades.values.sum()
+    val totalSubjects = grades.size
+    val gpa = totalGrades / totalSubjects
+
+    // Display the GPA
+    println("\nTotal Subjects: $totalSubjects")
+    println("Total Sum of Grades: $totalGrades")
+    println("Grade Point Average (GPA): %.2f".format(gpa))
+}
